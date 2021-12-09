@@ -1,0 +1,20 @@
+header{
+    background: var(--cl-black);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:  10px 5px;
+    align-items: center;
+}
+
+.head-logo__img{
+    max-width: 100px;
+    max-height: 80px;
+}
+
+.head-nav__item{
+    color: var(--cl-white);
+    margin: 0 50px;
+    font-size: 1.6rem;
+    text-decoration: none;
+}

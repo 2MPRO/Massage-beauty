@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Raleway:ital,wght@0,400;0,500;1,100;1,300;1,400&family=Roboto:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap');
+
+:root {
+    --cl-black:#000;
+    --cl-white:#fff;
+    --cl-textad :#858796;
+    --cl-green: #4eb92d;
+    --cl-red: #ed1b36;
+    --cl-orange: #f1975f;
+    --cl-text: #686868;
+    --cl-title: #1e1e1e;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6;
+    
+}
+
+#wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+a {
+    color: #1e1e1e;
+}
