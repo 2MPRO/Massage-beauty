@@ -1,20 +1,140 @@
+
 header{
+    left: 0;
+    right: 0;
+    top:0;
     background: var(--cl-black);
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding:  10px 5px;
     align-items: center;
+    position: fixed;
+    z-index: 9;
+}
+section{
+    margin-top:120px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    text-align: center;
+}
+.banner{
+   box-sizing: border-box;
+   display: block;
+  
+}
+.banner-wrap{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .head-logo__img{
-    max-width: 100px;
-    max-height: 80px;
+    max-width: 200px;
+    max-height: 100px;
 }
 
 .head-nav__item{
+    position: relative;
     color: var(--cl-white);
     margin: 0 50px;
     font-size: 1.6rem;
     text-decoration: none;
+}
+.head-nav__item::after{
+    position: absolute;
+    content: "";
+    background-color: var(--cl-orange);
+    transition:  0.2s ease-in; 
+    top:100%;
+    left: 0;
+    height: 3px;
+    width: 0;
+}
+.head-nav__item:hover::after{ 
+    width: 100%;
+}
+
+.banner_img{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+}
+.banner_img img{
+    max-width: 100%;
+}
+.banner_border{
+    z-index: 1;
+    top:10%;
+    right: 0;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    border: 4px var(--cl-red) solid;
+}
+
+.banner-content-head{
+    font-family: utm_scriptina-font;
+    text-align: center;
+    position: absolute;
+    width: 35%;
+    background-color: #fff;
+    top:10%;
+    right: 15%;
+    font-size: 2.5rem;
+    z-index: 2;
+    box-sizing: border-box;
+    color: var(--cl-title);
+    font-weight: 800;
+}
+.banner-content-body{
+    color: var(--cl-text);
+    text-align: justify;
+    top:20%;
+    right: 8%;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 40%;
+    background-color: #fff;
+}   
+.banner-content--btn{
+    cursor: grab;
+    margin-top: 20px ;
+    display: block;
+}
+/* Content */
+    /* Promotion */
+.home-content{
+        margin: 100px 0;
+    
+}
+.home-title{
+    font-size: 2.5rem;
+    color: var(--cl-red);
+    margin-bottom: 50px;
+}
+.row{
+    margin: 0 auto;
+}
+.service-item{
+   text-align: center;
+    box-sizing: border-box;
+}
+.service-item__img{
+    max-width: 300px;
+    max-height: 300px;
+}
+.service-item__title{
+    display: block;
+    max-width: 300px;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+.service-item__descr{
+    display: block;
+   text-align: center;
+    max-width: 300px;
+    font-size: 1.4rem;
 }

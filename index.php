@@ -1,7 +1,7 @@
 <?php
 session_start();
-    $mod = isset($_GET['act']) ? $_GET['act'] : "home";
-    switch ($mod) {
+    $act = isset($_GET['act']) ? $_GET['act'] : "home";
+    switch ($act) {
         case 'home':
             require_once('./Controllers/HomeController.php');
             $objCate = new homeController();

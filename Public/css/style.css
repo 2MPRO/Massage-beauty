@@ -7,7 +7,7 @@
     --cl-green: #4eb92d;
     --cl-red: #ed1b36;
     --cl-orange: #f1975f;
-    --cl-text: #686868;
+    --cl-text: #1b1919;
     --cl-title: #1e1e1e;
 
 }
@@ -27,9 +27,24 @@ html {
 }
 
 #wrapper {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
 }
-a {
-    color: #1e1e1e;
+
+@font-face {
+    font-family: utm_scriptina-font;
+    src: url(../font/utm_scriptina_kt/UTMScriptinaKT.ttf);
+}
+/* common */
+.btn-view-add{
+    color: var(--cl-orange);
+    padding: 10px;
+    background-color: var(--cl-white);
+    border: 1px solid var(--cl-orange);
+    cursor: pointer;
+    z-index: 9;
+}
+.clear{
+  
+    clear: both;
 }
