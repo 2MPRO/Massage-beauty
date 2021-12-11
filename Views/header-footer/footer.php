@@ -8,22 +8,23 @@
         <div class="col-lg-3 col">
             <div class="footer-follow">
                 <h4>FOLLOW US</h4>
-                <i></i>
-                <i></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-github"></i>
             </div>
             <div class="footer-contact">
                 <h4>CONTACT US</h4>
-                <a href="codtalk.github.io">Website : codtalk.github.io</a>
-                <span>Numphone : 0394921219</span>
+                <a class="link-contact" href="codtalk.github.io">Website : codtalk.github.io</a>
+                <div>Numphone : 0394921219</div>
             </div>
         </div>
         <div class="col-lg-3 col">
+            <h4>CONTACT US</h4>
             <ul>
-                <li>HOME</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><a href="">HOME </a></li>
+                <li><a href="">BOOK</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACTS</a></li>
+                <li><a href="">LOGIN</a></li>
             </ul>
         </div>
     </div>
