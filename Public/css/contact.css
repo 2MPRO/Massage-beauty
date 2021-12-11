@@ -1,0 +1,134 @@
+/* CONTACT */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .contact .maxwidth {
+    position: absolute;
+} */
+
+.title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.title h4 {
+    position: relative;
+    z-index: 99;
+    font-size: 30px;
+    color: #f11526;
+    font-weight: bold;
+    margin: 0px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.title .commit {
+    font-size: 16px;
+}
+
+.left {
+    float: left;
+    /* width: 49%; */
+    
+}
+
+.form .label_input, .label_input .label_title {
+    margin-bottom: 10px;
+}
+
+
+.form .label_title {
+    margin-right: 370px;
+    font-size: 16px;
+}
+
+.form .label_input .input_cell input {
+    width: 450px;
+    padding: 10px 10px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form .label_input .input_cell .input_content {
+    height: 120px;
+    width: 100%;
+}
+
+.form .btn-send {
+    border: none;
+    padding: 10px 25px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background: red;
+    margin-right: 380px;
+    font-size: 16px;
+} 
+
+.right {
+    float: right;
+    width: 49%;
+}
+
+.form_contact .slg-title {
+    font-size: 25px;
+}
+
+.form_contact .intro {
+    text-align: justify;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.massage_title .intro_massage {
+    margin-top: 16px;
+    margin-right: 428px;
+}
+
+
+.massage .address {
+    margin-top: 16px;
+    /* margin-right: 500px; */
+    width: 60%;
+}
+
+.massage .address span {
+    font-size: 12px;
+    
+}
+
+.massage .hotline_email {
+    margin-top: 16px;
+    margin-right: 400px;
+}
+
+.massage .hotline_email .hotline {
+    font-size: 12px;
+    margin-top: 160px;
+    
+}
+
+.massage .hotline_email .email {
+    font-size: 12px;
+    margin-top: 160px;
+}
+
+/* .massage .hotline_email .email {
+    margin-top: 160px;
+} */
+
+/* .massage .hotline_email span {
+    font-size: 12px;
+    margin-right: 150px;
+    
+} */
+
+/* ------- */

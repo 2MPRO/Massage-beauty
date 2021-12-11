@@ -10,6 +10,7 @@
     
     <link rel="stylesheet" href="Public/css/style.css">
     <link rel="stylesheet" href="Public/css/main.css">
+    <link rel="stylesheet" href="Public/css/contact.css">
     <title>Document</title>
 </head>
 <body>
