@@ -23,7 +23,6 @@ body {
 html {
     font-size: 62.5%;
     line-height: 1.6;
-    position: relative;
 }
 
 #wrapper {
@@ -46,6 +45,5 @@ html {
     z-index: 9;
 }
 .clear{
-  
     clear: both;
 }
