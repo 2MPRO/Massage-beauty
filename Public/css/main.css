@@ -4,6 +4,8 @@ footer{
     color: var(--cl-white);
     padding: 70px 0;
     margin: 0 auto;
+    position: absolute;
+    bottom: 0;
 }
 footer .row{
     justify-content: center;

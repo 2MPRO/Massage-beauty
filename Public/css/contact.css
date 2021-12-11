@@ -17,7 +17,6 @@
 
 .title h4 {
     position: relative;
-    z-index: 99;
     font-size: 30px;
     color: #f11526;
     font-weight: bold;
@@ -106,6 +105,7 @@
 }
 
 .massage .hotline_email {
+    
     margin-top: 16px;
     margin-right: 400px;
 }
@@ -113,7 +113,7 @@
 .massage .hotline_email .hotline {
     font-size: 12px;
     margin-top: 160px;
-    
+    display: block;
 }
 
 .massage .hotline_email .email {
