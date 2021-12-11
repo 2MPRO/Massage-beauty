@@ -7,6 +7,9 @@
         case "contact":
             require_once("contact.php");
             break;
+        case "login":
+            require_once("login.php");
+            break;
         default : require_once("home.php");
      }
 ?>
