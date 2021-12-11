@@ -7,5 +7,10 @@ session_start();
             $objCate = new homeController();
             $objCate->show();
             break;
+        case 'contact':
+            require_once('./Controllers/HomeController.php');
+            $objCate = new homeController();
+            $objCate->show();
+            break;
     }
 ?>

@@ -15,9 +15,11 @@
 <body>
     <div id="wrapper">
     <?php require_once("header-footer/header.php") ?>
+
     <section>
         <?php require_once("content.php")?>
     </section>
+    
     <?php   require_once("header-footer/header.php") ?>
     </div>
 </body>
