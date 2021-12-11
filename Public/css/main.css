@@ -1,4 +1,21 @@
 
+footer{
+    background: var(--cl-black);
+    color: var(--cl-white);
+    padding: 70px 0;
+    margin: 0 auto;
+}
+footer .row{
+    justify-content: center;
+}
+footer .col{
+    margin: 0 20px 20px 0px;
+}
+footer input{
+
+    background-color: transparent;
+    border: 1px solid #333;
+}
 header{
     left: 0;
     right: 0;
@@ -12,6 +29,7 @@ header{
     position: fixed;
     z-index: 9;
 }
+
 section{
     max-width: 1200px;
     margin-top:120px ;
@@ -175,19 +193,41 @@ section{
 .book{
     background-image: url(../imgs/img_web/background-row2.png);
     margin: 100px 0;
-    padding-bottom: 20px;
+    padding: 50px;
 }
 
 .book-form{
-    margin: 20px auto;
+    margin: auto auto;
     padding-bottom: 20px;
-    max-width: 25%;
+    max-width: 37%;
     background-color:rgba(0, 0, 0, 0.27);
 }
 .book-field{
-    margin: 15px;
+    margin: 30px;
 }
 .book-item-input{
+    background:none;
+    padding: 10px 5px;
     width: 100%;
-    outline: #fff;
+    outline: unset;
+    color: #fff;
+    border: 1px solid #cacaca;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+.btn-input{
+    text-transform: uppercase;
+    outline: unset;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 4px ;
+    border: #fff solid 1px;
+}
+.book-field ::placeholder {
+    color:  #fff;
+  }
+
+  /* Máp */
+.map{
+    width: 100%;
 }

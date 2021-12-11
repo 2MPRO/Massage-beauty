@@ -20,7 +20,7 @@
         <?php require_once("content.php")?>
     </section>
     
-    <?php   require_once("header-footer/header.php") ?>
+    <?php   require_once("header-footer/footer.php") ?>
     </div>
 </body>
 </html>
