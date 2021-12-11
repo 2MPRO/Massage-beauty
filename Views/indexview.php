@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Public/css/style.css">
     <link rel="stylesheet" href="Public/css/main.css">
     <link rel="stylesheet" href="Public/css/contact.css">
+    <link rel="stylesheet" href="Public/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
 
     <section>
         <?php require_once("content.php")?>
+
     </section>
     
     <?php   require_once("header-footer/footer.php") ?>

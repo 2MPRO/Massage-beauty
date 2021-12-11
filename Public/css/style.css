@@ -23,12 +23,13 @@ body {
 html {
     font-size: 62.5%;
     line-height: 1.6;
-    
+    position: relative;
 }
 
 #wrapper {
     max-width: 1400px;
     margin: 0 auto;
+   
 }
 
 @font-face {
