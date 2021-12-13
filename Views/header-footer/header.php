@@ -9,6 +9,12 @@
         <a  class = "head-nav__item" href="">ĐẶT LỊCH</a>
         <a  class = "head-nav__item" href="">DỊCH VỤ</a>
         <a  class = "head-nav__item" href="?act=contact">LIÊN HỆ</a>
+
+        <?php if(isset($_SESSION['login'])) 
+        { ?>
+            <a  class = "head-nav__item" href="?act=login"><?=  $_SESSION['login']['Ten'] ?></a>
+     <?php } else{  ?>
         <a  class = "head-nav__item" href="?act=login">ĐĂNG NHẬP</a>
+        <?php }?>
     </nav>
 </header>

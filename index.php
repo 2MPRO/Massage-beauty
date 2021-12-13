@@ -17,6 +17,11 @@ session_start();
             $objCate = new LoginController();
             $objCate->show();
             break;
+        case 'login_action' :
+            require_once('./Controllers/LoginController.php');
+            $objCate = new LoginController();
+            $objCate->login_action();
+            break;
         default : 
         require_once('./Controllers/HomeController.php');
             $objCate = new homeController();
