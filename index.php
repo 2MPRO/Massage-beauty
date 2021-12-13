@@ -22,5 +22,9 @@ session_start();
             $objCate = new BookingController();
             $objCate->show();
             break;
+        default : 
+        require_once('./Controllers/HomeController.php');
+            $objCate = new homeController();
+            $objCate->show();
     }
 ?>

@@ -10,6 +10,9 @@
         case "booking":
             require_once("booking.php");
             break;
+        case "login":
+            require_once("login.php");
+            break;
         default : require_once("home.php");
      }
 ?>
