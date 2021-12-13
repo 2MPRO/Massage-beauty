@@ -23,12 +23,12 @@ body {
 html {
     font-size: 62.5%;
     line-height: 1.6;
-    
 }
 
 #wrapper {
     max-width: 1400px;
     margin: 0 auto;
+   
 }
 
 @font-face {
@@ -45,6 +45,5 @@ html {
     z-index: 9;
 }
 .clear{
-  
     clear: both;
 }
