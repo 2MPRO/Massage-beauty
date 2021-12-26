@@ -80,7 +80,9 @@ section{
     color: var(--cl-white);
     margin: 0 50px;
     font-size: 1.6rem;
+    text-transform: uppercase;
     text-decoration: none;
+    
 }
 .head-nav__item::after{
     position: absolute;
