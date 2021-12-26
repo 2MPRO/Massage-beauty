@@ -78,10 +78,15 @@
     margin-left: 50px;
 }
 
+.massage .massage_title {
+    text-align: justify;
+}
+
 .massage .address {
     margin-top: 16px;
     /* margin-right: 500px; */
-    width: 60%;
+    width: 80%;
+    text-align: justify;
 }
 
 .massage .address span {
@@ -93,6 +98,8 @@
     
     margin-top: 16px;
     margin-right: 400px;
+    width: 50%;
+    text-align: justify;
 }
 
 .massage .hotline_email .hotline {
