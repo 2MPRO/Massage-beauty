@@ -1,11 +1,10 @@
 <?php
-   require_once("./Models/selectsql.php");
+   require_once("./Models/loginModel.php");
     class loginController{
-        
         var $select_model;
         function __construct()
         {
-            $select_model = new selectsql();
+            $this->select_model = new LoginModel();
         }
         public function show(){
             require_once('./Views/indexview.php');  
@@ -20,13 +19,26 @@
                     'SDT'=>$numPhone,
                     'MatKhau'=>$pass
                 ); 
-                $this->select_model->login_action($data);
+               $this->select_model->login_action($data);
                
             }
             else
                 setcookie('msg',"Vui lòng kiểm tra lại thông tin", time()+4);
-            echo" <script>alert('Khong tim thay SDT ')</script>";
-        
+
         }
+        public function logout(){
+            
+            if(isset($_SESSION['login'])){
+                unset($_SESSION['login']);
+            }
+            if(isset($_SESSION['isAdmin'] )){
+                unset($_SESSION['isAdmin'] );
+            }
+            if(isset($_SESSION['isStaff'])){
+                unset($_SESSION['isStaff']);
+            }
+            header('Location: ?act=home');
+        }
+
     }
 ?>

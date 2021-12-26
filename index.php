@@ -21,6 +21,12 @@ session_start();
             require_once('./Controllers/LoginController.php');
             $objCate = new LoginController();
             $objCate->login_action();
+            break;
+        case 'logout' :
+                require_once('./Controllers/LoginController.php');
+                $objCate = new LoginController();
+                $objCate->logout();
+                break;
         case 'booking':
             require_once('./Controllers/bookingController.php');
             $objCate = new BookingController();

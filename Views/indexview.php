@@ -14,6 +14,7 @@
     <title>Document</title>
 </head>
 <body>
+   <?php  require_once("Models/user.php")  ?>
     <div id="wrapper">
         <?php require_once("header-footer/header.php") ?>
 

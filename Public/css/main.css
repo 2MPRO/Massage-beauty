@@ -82,7 +82,7 @@ section{
     font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
-    
+    display: inline-block;
 }
 .head-nav__item::after{
     position: absolute;
@@ -301,4 +301,42 @@ section{
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
+}
+
+
+.head-nav__item::before{
+    display: block;
+    z-index: 9;
+    content:"";
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    top: 100%;
+    right: -50%;
+}
+
+.head-nav__item:hover .sub-nav{
+    display: block;
+}
+.sub-nav{
+    width:max-content;
+    min-height: 100px;
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    color: rgb(3, 3, 3);
+    right: -50%;
+    top: calc(100% + 5px);
+    font-size: 1.3rem;
+    position: absolute;
+    box-shadow: 0  1px 2px rgb(190, 183, 183);
+    border-radius:2px ;
+}
+.sub-nav-item{
+    color: black;
+    margin: 20px 0;
+}
+.sub-nav-item-link{
+    color: black;
+   
 }
