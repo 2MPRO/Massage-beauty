@@ -61,9 +61,9 @@
                 </p>
                 <p class="hotline_email">
                     <span class="hotline">
-                        Hotline: 0932 518 555 (Mr Tùng) <br>                      
+                        Hotline: 0932 518 555 (2MPRO) <br>                      
                     </span>
-                    <span class="email">Email: chuanmassage@gmail.com</span>                  
+                    <span class="email">Email: 2MPRO@gmail.com</span>                  
                 </p>
             </div>
 
