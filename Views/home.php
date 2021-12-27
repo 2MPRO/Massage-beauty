@@ -21,38 +21,40 @@
 <div class="home-content">
     <div class="promotion">
         <h1 class="home-title">Khuyến Mãi</h1>
+        <div class="grid wide">
         <div class="row  row-service">
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>
             </div>
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>
             </div>
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>
             </div>
         </div>
+        </div>
     </div>
     <div class="hot-service">
         <h1 class="home-title">Dịch vụ hot</h1>
         <div class="row row-service">
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>
             </div>
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>
             </div>
-            <div class="col-lg-3 col service-item">
+            <div class="l-4 col service-item">
                 <div class="img-wrap"><img src="Public/imgs/img_service/promotion1.png" alt="" class="service-item__img"></div>
                 <h3 class="service-item__title">Khuyến mãi Massage Couple VIP | Dành cho cặp đôi</h3>
                 <p class="service-item__descr">Khuyến mãi Couple Vip: Giá vé 950,000đ GIẢM 10% khi đặt qua Hotline còn 855,000đ.</p>

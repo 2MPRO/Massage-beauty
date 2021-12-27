@@ -9,6 +9,8 @@
     --cl-orange: #f1975f;
     --cl-text: #1b1919;
     --cl-title: #1e1e1e;
+    --cl-primary:#f51f9c;
+    --cl-primary-light:#f742ab;
 
 }
 
@@ -25,11 +27,6 @@ html {
     line-height: 1.6;
 }
 
-#wrapper {
-    max-width: 1600px;
-    margin: 0 auto;
-   
-}
 
 @font-face {
     font-family: utm_scriptina-font;
@@ -44,6 +41,20 @@ html {
     cursor: pointer;
     z-index: 9;
 }
+.btn-booking{
+    text-decoration : none;
+    background-color: var(--cl-primary);
+    padding: 10px;
+    color: var(--cl-white);
+    border-radius: 4px ;
+    cursor: pointer;
+    z-index: 9;
+    box-shadow:0  1px 2px rgb(190, 183, 183);
+}
+.btn-booking:hover{
+    background-color: var(--cl-primary-light);
+}
 .clear{
     clear: both;
 }
+/* ////////////// */

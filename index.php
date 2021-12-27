@@ -32,6 +32,11 @@ session_start();
             $objCate = new BookingController();
             $objCate->show();
             break;
+        case 'service':
+                require_once('./Controllers/serviceController.php');
+                $objCate = new serviceController();
+                $objCate->show();
+                break;
         default : 
         require_once('./Controllers/HomeController.php');
             $objCate = new homeController();

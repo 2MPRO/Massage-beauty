@@ -151,8 +151,7 @@ section{
     /* Promotion */
 
 .home-content{
-        margin: 100px 0;
-    
+    margin: 100px 0;
 }
 .home-title{
     text-transform: uppercase;
@@ -161,26 +160,35 @@ section{
     padding: 30px 0;
 }
 .row-service{
-    text-align: center;
-    justify-content: center;
+  
 }
 
 .service-item{
-    padding: 0;
-    padding: 10px;
+    position: relative;
+    padding: 5px 0;
+    margin: 10px 0;
+    box-sizing: border-box;
     border-radius: 5px;
-    box-sizing: content-box;
     border: 1px solid rgb(207, 201, 201);
-    margin: 15px;
+    overflow: hidden;
   /*  box-shadow: #555 2px ; */ 
-    
 }
-
+.service-item--booking{
+    top:65%;
+    right: -100px;
+    position: absolute;
+    visibility: hidden;
+    transition: 0.2s ease-in;
+}
 .service-item:hover{
     border: 1px solid var(--cl-red);
 }
-.img-wrap{
+.service-item:hover .service-item--booking{
+    right: 5%;
+    visibility: visible;
     
+}
+.img-wrap{
     box-sizing: content-box;
     overflow: hidden;
     border-radius:4px ;
@@ -195,7 +203,7 @@ section{
     transform: scale(1.1);
 }
 .service-item__title{
-   text-align: left;
+    text-align: left;
     max-width: 100%;
     font-size: 1.4rem;
     margin: 10px 0;
@@ -203,6 +211,7 @@ section{
 .service-item__descr{
     text-align: left;
     max-width: 100%;
+    text-align: justify;
     font-size: 1.4rem;
 }
 /* Dịch vụ hot */
@@ -319,6 +328,7 @@ section{
     display: block;
 }
 .sub-nav{
+    min-width: 100px;
     width:max-content;
     min-height: 100px;
     display: none;
@@ -340,3 +350,4 @@ section{
     color: black;
    
 }
+

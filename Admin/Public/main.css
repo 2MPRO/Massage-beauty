@@ -1,0 +1,19 @@
+.nav-boby{
+    height: 100%;
+    background-color: blue;
+    color: var(--cl-white);
+}
+.img-logo{
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    height: 70px;
+}
+.nav-list{
+    padding:0 10px;
+}
+.item-nav{
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 20px;
+}
