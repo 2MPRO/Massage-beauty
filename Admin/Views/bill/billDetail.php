@@ -32,7 +32,7 @@ if ($dataBillDetail == null) { ?>
             <label id ="TongTien">  <?= $databillselt[0]['TongTien'] ?></label>
             </select>
         </fieldset>
-
+                    <hr>
     </form>
 </div>
 

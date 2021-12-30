@@ -15,6 +15,10 @@ session_start();
                 case 'bill':    
                     $controller_obj->show();
                     break;
+                case 'addBill':    
+               
+                    $controller_obj->showAddBill();
+                    break; 
                 case 'detail':
                     $controller_obj->detail();
                     break;
@@ -22,6 +26,7 @@ session_start();
                    $controller_obj->confirm();
                     break;
                 case 'addDetail':
+                   
                     $controller_obj->showAddDetail();
                     break;
                 case 'addDetailAction':

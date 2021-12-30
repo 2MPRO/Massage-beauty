@@ -47,8 +47,8 @@
                   case 'bill':
                     require_once('bill/bill.php');
                     break;
-                  case 'add':
-                    require_once('typeproduct/add.php');
+                  case 'addBill':
+                    require_once('bill/addbill.php');
                     break;
                   case 'detail':
                     require_once('bill/billDetail.php');

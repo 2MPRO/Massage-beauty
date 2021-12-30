@@ -64,10 +64,10 @@ class Model
             $MaHD = $data['MaHD'];
             $this->table = "bill&act=detail&idBill=$MaHD";
         }
-
+       
         if ($status == true) {
             setcookie('msg', 'Thêm mới thành công', time() + 2);
-            header('Location: ?mod=' . $this->table);
+                header('Location: ?mod=' . $this->table);
         } else {
             setcookie('msg',"Đã tồn tại dịch vụ; vui lòng tăng số lượng.", time() + 2);
             header('Location: ?mod=' . $this->table );

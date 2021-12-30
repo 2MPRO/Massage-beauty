@@ -4,7 +4,14 @@
         var $table = "hoadon";
         var $contens = "MaHD";
     
+    public function ChitietHoaDon($id)
+    {
+        $query = "select ct.*, s.TenSP as Ten, s.DonGia as DonGia from chitiethoadon as ct,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id'";
 
+        require("result.php");
+        
+        return $data;
+    }
     function  detail($id){
         $query = "select ct.*, s.TenSP as Ten,Hoadon.TrangThai, s.DonGia as DonGia from chitiethoadon as ct,hoadon ,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id' and hoadon.MaHD = ct.MaHD ";
 
@@ -44,14 +51,18 @@
         function service()
         {  
             $query ="SELECT * from dichvu";
-          
             require("result.php");
             return $data;  
         }
-        function insertDetailBill(){
-            $query ="INSERT into chitiethoadon VALUES()";
+        function getMaxidBill(){
+            $query = "SELECT MAX(MaHD) as MaHD FROM `hoadon` ";
+            require("result.php");
+            return $data;  
         }
-
-
+        function insertBill(){
+            $query = "INSERT INTO `hoadon` (`MaHD`, `MaND`, `NgayHen`, `NguoiDung`, `SDT`, `DiaChi`, `TongTien`, `TrangThai`) VALUES (NULL, NULL, '2021-12-30 07:38:52.000000', NULL, NULL, NULL, NULL, '0');";
+            $result = $this->conn->query($query);     
+        }
+     
 }
 ?>

@@ -1,5 +1,4 @@
-<a href="" class="btn-booking btn-add-new">Thêm mới</a>
-
+<a href="?mod=bill&act=addBill" class="btn-booking btn-add-new">Thêm mới</a>
 <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-success">
         <strong class= "msg-box">Thông báo : <?= $_COOKIE['msg'] ?></strong> 
@@ -33,7 +32,10 @@
                     }else 
                         echo "Chưa duyệt";
                     ?> </td>
-                    <th><a href="?mod=bill&act=detail&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking">Xem chi tiết</a></th>
+                    <th>
+                    
+                        <a href="?mod=bill&act=detail&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking"><?=$row['TrangThai']==0?'Chỉnh sửa': 'Xem chi tiết'?></a>
+                    </th>
                 </tr>
                 <?php }?>
         </tbody>

@@ -28,6 +28,22 @@
             $this->bill_model->update($data);
             require_once("Views/indexviewAD.php");
         }
+
+       /*  function showAddBillInsert(){
+            $data = $this->bill_model->insertBill();
+           
+        } */
+        function showAddBill(){
+            $data = $this->bill_model->getMaxidBill();
+            $MaHD = $data[0]['MaHD'] + 1;
+            $dataBillDetail =  $this->bill_model->ChitietHoaDon($MaHD);
+            $data_dm = $this->bill_model->danhmuc();
+            $data_service = $this->bill_model->service();
+            $data_User = $this->bill_model->getUser();
+            require_once("Views/indexviewAD.php");
+        }
+       
+
         function showAddDetail()
         {
            // $data_lsp = $this->bill_model-> service_category();

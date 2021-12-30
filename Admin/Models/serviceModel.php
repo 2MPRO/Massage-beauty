@@ -46,5 +46,24 @@
           
         }
          }
+        function getPrice($MaSP){
+            $query = "select * from dichvu where MaSP = '$MaSP'";
+            require("result.php");
+            return $data;
+        }
+
+       function  InsertNewDetailBill($MaHD,$MaSP, $quantity,$TongTien){
+        $query = "INSERT INTO `chitiethoadon` (`MaHD`, `MaSP`, `soLan`, `tongTien`) VALUES ('$MaHD', '$MaSP', '$quantity', '$TongTien');";
+        $result = $this->conn->query($query);
+       }
+
+       public function ChitietHoaDon($id)
+       {
+           $query = "select ct.*, s.TenSP as Ten, s.DonGia as DonGia from chitiethoadon as ct,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id'";
+   
+           require("result.php");
+           
+           return $data;
+       }
     }
 ?>
