@@ -1,6 +1,6 @@
 <?php
-require_once("connection.php");
-class login
+require_once("model.php");
+class login extends model
 {
     var $conn;
     function __construct()
@@ -19,12 +19,12 @@ class login
         return $this->conn->query($query)->fetch_assoc();
     }
     function tk_dtthang($m){
-        $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayLap) = $m And TrangThai = 1";
+        $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayHen) = $m And TrangThai = 1";
 
         return $this->conn->query($query)->fetch_assoc();
     }
     function tk_dtnam($y){
-        $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE YEAR(NgayLap) = $y And TrangThai = 1";
+        $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE YEAR(NgayHen) = $y And TrangThai = 1";
 
         return $this->conn->query($query)->fetch_assoc();
     }

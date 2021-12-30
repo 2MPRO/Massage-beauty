@@ -1,5 +1,15 @@
-.nav-boby{
+body{
+    padding-bottom: 100px;
+    min-height: 1000px;
+}
+section{
     height: 100%;
+}
+.body-content{
+    height: 100%;
+}
+.nav-boby{
+    min-height: 1000px;
     background-color: blue;
     color: var(--cl-white);
 }
@@ -10,10 +20,78 @@
     height: 70px;
 }
 .nav-list{
-    padding:0 10px;
+    padding:0 5px;
 }
 .item-nav{
     font-weight: 400;
-    font-size: 1.6rem;
     margin: 20px;
+}
+.item-nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--cl-white);
+}
+.body-content{
+    margin-top: 20px;
+    border-radius: 2px ;
+  
+}
+
+.head-content{
+  margin: 30px;
+}
+.btn-add-new-detail{
+    display: inline-block;
+    margin: 20px;
+}
+.table-bordered {
+    padding-top: 10px;
+}
+th, td {
+    text-align: center;
+    
+    border: 1px solid rgb(150, 145, 145);
+  }
+
+hr{
+    margin: 20px 0;
+}
+.btn-action{
+      padding: 5px;
+    
+  }
+
+.msg-box{
+    margin-top: 20px ;
+    display: block;
+}
+.form-add{
+    margin: 50px 0 20px;
+    width: 100%;
+}
+.form-title{
+    font-size: 1.6rem;
+}
+.form-field{
+    width: 100%;
+    margin: 20px 0px;
+} 
+
+.form-field label {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 5px;
+    display: block;
+}
+.form-field select, .form-field input{
+    border: 1px solid #ced4da;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+.input-num{
+    display: inline;
+    width: 20px;
+    border: none;
+    text-align: center;
 }

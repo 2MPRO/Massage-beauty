@@ -8,5 +8,36 @@ session_start();
             $controller_obj = new LoginController();
             $controller_obj->admin();
             break;
+        case 'bill':
+            require_once('Controllers/billController.php');
+            $controller_obj = new billController();
+            switch($act){
+                case 'bill':    
+                    $controller_obj->show();
+                    break;
+                case 'addBill':    
+               
+                    $controller_obj->showAddBill();
+                    break; 
+                case 'detail':
+                    $controller_obj->detail();
+                    break;
+                case 'confirm':
+                   $controller_obj->confirm();
+                    break;
+                case 'addDetail':
+                   
+                    $controller_obj->showAddDetail();
+                    break;
+                case 'addDetailAction':
+                    require_once('Controllers/detailBillController.php');
+                    $controller_obj = new detailBillController();
+                    $controller_obj->InsertdetailBill();
+                    break;
+                default : 
+                $controller_obj->show();
+                    break;
+            }
+          break;     
     }
 ?>
