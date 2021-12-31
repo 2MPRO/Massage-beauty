@@ -93,7 +93,7 @@ class Model
             $this->table= "bill";
         }
         if ($result == true) {
-            setcookie('msg', 'Duyệt thành công', time() + 2);
+            setcookie('msg', 'Cập nhật thành công', time() + 2);
             
             header('Location: ?mod=' . $this->table);
         } else {
