@@ -63,6 +63,9 @@ session_start();
                 case 'saveEdit':    
                     $controller_obj->showsaveEdit();
                     break;
+                case 'confirm':
+                    $controller_obj->confirm();
+                    break;
                 default : 
                 $controller_obj->show();
                     break;

@@ -88,6 +88,15 @@
                 
             }
         }
+        function confirm()
+        {
+            $data = array(
+                'MaHD' => $_GET['MaHD'],
+                'TrangThai' => 1,
+            );
+            $this->book_model->update($data);
+            require_once("Views/indexviewAD.php");
+        }
   
         
     }
