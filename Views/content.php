@@ -13,9 +13,12 @@
         case "login":
             require_once("login.php");
             break;
-            case "service":
-                require_once("service.php");
-                break;
+        case "register":
+            require_once("register.php");
+            break;
+        case "service":
+            require_once("service.php");
+            break;
         default : require_once("home.php");
      }
 ?>

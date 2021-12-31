@@ -7,31 +7,48 @@ session_start();
             $objCate = new homeController();
             $objCate->show();
             break;
+            
         case 'contact':
             require_once('./Controllers/contactController.php');
             $objCate = new ContactController();
             $objCate->show();
             break;
+
         case 'login' :
             require_once('./Controllers/LoginController.php');
             $objCate = new LoginController();
             $objCate->show();
             break;
+
         case 'login_action' :
             require_once('./Controllers/LoginController.php');
             $objCate = new LoginController();
             $objCate->login_action();
             break;
+
         case 'logout' :
-                require_once('./Controllers/LoginController.php');
-                $objCate = new LoginController();
-                $objCate->logout();
-                break;
+            require_once('./Controllers/LoginController.php');
+            $objCate = new LoginController();
+            $objCate->logout();
+            break;
+
+        case 'register' :
+            require_once('./Controllers/registerController.php');
+            $objCate = new registerController();
+            $objCate->show();
+
+         case 'register_action' :
+            require_once('./Controllers/registerController.php');
+            $objCate = new registerController();
+            $objCate->register_action();
+            break;
+
         case 'booking':
             require_once('./Controllers/bookingController.php');
             $objCate = new BookingController();
             $objCate->show();
             break;
+
         case 'service':
                 require_once('./Controllers/serviceController.php');
                 $objCate = new serviceController();

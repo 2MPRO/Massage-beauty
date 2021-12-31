@@ -151,7 +151,26 @@
                     break;
                 }
                 break;
+
+                case 'product':
+                  switch ($act) {
+                    case 'list':
+                      require_once('product/sanpham/list.php');
+                      break;
+                    case 'add':
+                      require_once('product/addproduct.php');
+                      break;
+                    case 'edit':
+                      require_once('product/updateProduct.php');
+                      break;
+                    default:
+                      require_once('product/productad.php');
+                      break;
+                    }
+                    break;
+
             }
+
           } else {
             if (isset($_SESSION['isStaff']) && $_SESSION['isStaff'] == true) {
               $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";
