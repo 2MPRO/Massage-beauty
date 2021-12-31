@@ -50,6 +50,9 @@
                   case 'addBill':
                     require_once('bill/addbill.php');
                     break;
+                    case 'editBill': 
+                      require_once('bill/editBill.php');
+                    break;
                   case 'detail':
                     require_once('bill/billDetail.php');
                     break;
@@ -64,6 +67,31 @@
                     break;
                 }
                 break;
+                case 'book':
+                  switch ($act) {
+                    case 'book':
+                      require_once('book/booklist.php');
+                      break;
+                    case 'addBook':
+                      require_once('book/addBook.php');
+                      break;
+                      case 'editBook': 
+                        require_once('book/editBook.php');
+                      break;
+                    case 'detail':
+                      require_once('bill/billDetail.php');
+                      break;
+                    case 'confirm':
+                      require_once('bill/bill.php');
+                      break;
+                    case 'addDetail':
+                        require_once('bill/addDetailBill.php');
+                        break;
+                    default:
+                    require_once('book/booklist.php');
+                      break;
+                  }
+                  break;
               case 'category':
                 switch ($act) {
                   case 'list':

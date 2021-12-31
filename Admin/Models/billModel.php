@@ -4,6 +4,15 @@
         var $table = "hoadon";
         var $contens = "MaHD";
     
+
+        function All()
+        {
+            $query = "select MaHD,MaND, DATE_FORMAT(NgayHen, '%d-%m-%Y') as NgayHen,Gio,NguoiDung,SDT,DiaChi,TongTien,TrangThai from $this->table where trangthai <> '3'";
+    
+            require("result.php");
+    
+            return $data;     
+        }
     public function ChitietHoaDon($id)
     {
         $query = "select ct.*, s.TenSP as Ten, s.DonGia as DonGia from chitiethoadon as ct,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id'";
@@ -22,6 +31,13 @@
     function getUser(){
         $query = "select * from nguoiDung";
 
+        require("result.php");
+        
+        return $data;
+    }
+    function getUserByID($id){
+        $query = "select * from nguoiDung where MaND = '$id'";
+        
         require("result.php");
         
         return $data;
@@ -63,6 +79,7 @@
             $query = "INSERT INTO `hoadon` (`MaHD`, `MaND`, `NgayHen`, `NguoiDung`, `SDT`, `DiaChi`, `TongTien`, `TrangThai`) VALUES (NULL, NULL, '2021-12-30 07:38:52.000000', NULL, NULL, NULL, NULL, '0');";
             $result = $this->conn->query($query);     
         }
-     
+       
+       
 }
 ?>

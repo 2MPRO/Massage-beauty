@@ -6,6 +6,7 @@ if ($dataBillDetail == null) { ?>
 
     <a href="?mod=bill&act=confirm&MaHD=<?= $MaHD ?>" class="btn-booking btn-add-new">Duyệt hóa đơn</a>
 <?php } ?>
+
 <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-success">
         <strong class="msg-box">Thông báo : <?= $_COOKIE['msg'] ?></strong>
@@ -26,7 +27,11 @@ if ($dataBillDetail == null) { ?>
                 <?php } ?>
             </select>
         </fieldset>
-
+        <fieldset class="form-field">
+            <label for="">Thời gian : </label>
+            <label id ="TongTien">  <?= $databillselt[0]['NgayHen'] ?></label>
+            </select>
+        </fieldset>
         <fieldset class="form-field">
             <label for="">Tổng Tiền : </label>
             <label id ="TongTien">  <?= $databillselt[0]['TongTien'] ?></label>
@@ -39,6 +44,7 @@ if ($dataBillDetail == null) { ?>
 <?php if ($dataBillDetail == null || $dataBillDetail[0]['TrangThai'] == 0) { ?>
     <a href="?mod=bill&act=addDetail&MaHD=<?= $MaHD ?>" class="btn-booking btn-add-new-detail">Thêm Dịch Vụ</a>
 <?php } ?>
+<h1 style="font-size: 1.4rem; margin : 5px;">Danh sách dịch vụ : </h1>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <thead>
         <tr>
@@ -67,6 +73,8 @@ if ($dataBillDetail == null) { ?>
                 <th><a href="" style=" display: <?= ($dataBillDetail == null || $dataBillDetail[0]['TrangThai'] == 0) ? '' : 'none' ?>" class="btn-action btn-booking">Xóa</a></th>
             </tr>
         <?php } ?>
+        
+
     </tbody>
 </table>
 <script>

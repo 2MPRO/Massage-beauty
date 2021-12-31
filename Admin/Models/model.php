@@ -64,12 +64,16 @@ class Model
             $MaHD = $data['MaHD'];
             $this->table = "bill&act=detail&idBill=$MaHD";
         }
-       
+        if($this->table == "hoadon"){
+            $this->table = "bill&act=bill";
+        }
         if ($status == true) {
-            setcookie('msg', 'Thêm mới thành công', time() + 2);
+            setcookie('msg',$query, time() + 2);
+           //setcookie('msg', 'Thêm mới thành công', time() + 2);
                 header('Location: ?mod=' . $this->table);
         } else {
-            setcookie('msg',"Đã tồn tại dịch vụ; vui lòng tăng số lượng.", time() + 2);
+            setcookie('msg',$query, time() + 2);
+           // setcookie('msg',"Đã tồn tại dịch vụ; vui lòng tăng số lượng.", time() + 2);
             header('Location: ?mod=' . $this->table );
         }
     }

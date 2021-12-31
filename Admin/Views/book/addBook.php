@@ -5,11 +5,11 @@
     <hr>
 <?php } ?>
 
-<h1 class="form-title">Thêm hóa đơn mới : </h1>
+<h1 class="form-title">Đặt lịch : </h1>
 
 <div class="body-content">
 
-    <form method="POST" class="form-add" action="?mod=bill&act=addBillAction">
+    <form method="POST" class="form-add" action="?mod=book&act=addBookAction">
         <fieldset class="form-field">
             <input name="MaHD" type="hidden" value="<?= $MaHD ?>">
 
@@ -21,11 +21,25 @@
                 <?php } ?>
             </select>
         </fieldset>
-        <button class="btn-booking btn-add-newbill">Lưu</button>
-        <hr>
-
+       
+      
         <div>
-            <h1 class="form-title">Thêm dịch vụ khác</h1>
+            <h1 class="form-title">Thời Gian</h1>
+            <fieldset class="form-field">
+                <label for="">Ngày</label>
+                <input type="hidden" id="date-picker-hidden" name="datepicker" >
+                <input type="date"   id="date-picker" required>
+            </fieldset>
+            <fieldset class="form-field">
+                <label for="">Giờ</label>
+                <input type="hidden"   id="time-picker-hidden" name="timepicker">
+                <input type="time"  id="time-picker" value="" timeformat = "24h" required>
+            </fieldset>
+            <button class="btn-booking btn-add-newbill">Lưu</button>
+            <hr />
+        </div>
+        <div>
+            <h1 class="form-title">Chọn dịch vụ</h1>
             <fieldset class="form-field">
                 <label for="">Danh mục</label>
                 <select id="MaDM" class="form-control" name="MaDM">
@@ -42,7 +56,7 @@
             </fieldset>
             <fieldset class="form-field">
                 <label for="">Số lượng</label>
-                <input class="SoLuong" name="SoLuong" type="number" name="" id="" min=1>
+                <input class="SoLuong" name="SoLuong" type="number" name="" id="" min=1 >
             </fieldset>
             <input class="MaHD" type="hidden" value="<?= $MaHD ?>">
             <fieldset>

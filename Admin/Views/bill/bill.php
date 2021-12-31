@@ -33,8 +33,12 @@
                         echo "Chưa duyệt";
                     ?> </td>
                     <th>
-                    
-                        <a href="?mod=bill&act=detail&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking"><?=$row['TrangThai']==0?'Chỉnh sửa': 'Xem chi tiết'?></a>
+                        <?php 
+                            if($row['TrangThai']==0){ ?>
+                                <a href="?mod=bill&act=editBill&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking">Chỉnh sửa</a>
+                            <?php } else {?>
+                                 <a href="?mod=bill&act=detail&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking">Xem chi tiết</a>
+                            <?php }?>
                     </th>
                 </tr>
                 <?php }?>
