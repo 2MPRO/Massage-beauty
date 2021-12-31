@@ -16,9 +16,14 @@ session_start();
                     $controller_obj->show();
                     break;
                 case 'addBill':    
-               
                     $controller_obj->showAddBill();
                     break; 
+                case 'editBill':    
+                    $controller_obj->showEditBill();
+                    break;
+                case 'addBillAction':    
+                      $controller_obj->AddBillAction();
+                      break; 
                 case 'detail':
                     $controller_obj->detail();
                     break;
@@ -26,7 +31,6 @@ session_start();
                    $controller_obj->confirm();
                     break;
                 case 'addDetail':
-                   
                     $controller_obj->showAddDetail();
                     break;
                 case 'addDetailAction':
@@ -68,5 +72,31 @@ session_start();
             }
             break;
 
+          break;  
+
+          case 'book':
+            require_once('Controllers/bookController.php');
+            $controller_obj = new bookController();
+            switch($act){
+                case 'book':    
+                    $controller_obj->show();
+                    break;
+                case 'addBook':    
+                    $controller_obj-> showAddBook();
+                    break;
+                case 'addBookAction':    
+                    $controller_obj->AddBookAction();
+                    break; 
+                case 'editBook':    
+                    $controller_obj->showEditBook();
+                    break; 
+                case 'saveEdit':    
+                    $controller_obj->showsaveEdit();
+                    break;
+                default : 
+                $controller_obj->show();
+                    break;
+            }
+          break;   
     }
 ?>

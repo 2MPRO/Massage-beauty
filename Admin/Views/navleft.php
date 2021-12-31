@@ -12,7 +12,7 @@
             <a href="?mod=bill&act=bill"> Quản lý hóa đơn</a>
           </li>
           <li class="item-nav">
-            <a href="?mod=room&act=room"> Quản lý lịch hẹn</a>
+            <a href="?mod=book&act=book"> Quản lý lịch hẹn</a>
           </li>
           <li class="item-nav">
             <a href="?mod=product&act=product"> Quản lý dịch vụ</a>

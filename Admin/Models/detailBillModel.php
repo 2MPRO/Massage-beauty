@@ -9,7 +9,19 @@
             $query ="UPDATE `hoadon` SET `TongTien` = `TongTien`+'$TongTien' WHERE `hoadon`.`MaHD` = '$MaHD'";
             $result = $this->conn->query($query);
         }
-
+        function deleteBillDetail($MaHD, $MaSP)
+        {
+            $query = "DELETE from chitiethoadon where MaHD = '$MaHD' and MaSP = '$MaSP'";
+            $status = $this->conn->query($query);
+        }
+        public function ChitietHoaDon($id)
+        {
+            $query = "select ct.*, s.TenSP as Ten, s.DonGia as DonGia from chitiethoadon as ct,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id'";
+    
+            require("result.php");
+            
+            return $data;
+        }
         public function getServiceById($MaSP)
         {
             $query = "select * from dichvu where MaSP = '$MaSP'";

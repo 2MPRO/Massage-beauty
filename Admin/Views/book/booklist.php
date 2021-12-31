@@ -1,4 +1,4 @@
-<a href="" class="btn-booking btn-add-new">Thêm mới</a>
+<a href="?mod=book&act=addBook" class="btn-booking btn-add-new">Đặt lịch</a>
 
 <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-success">
@@ -13,27 +13,34 @@
         <thead>
             <tr>
                 <th scope="col">Tên Khách Hàng</th>
-                <th scope="col">Ngày</th>
+                <th scope="col">Ngày Hẹn</th>
+                <th scope="col">Giờ Hẹn</th>
                 <th scope="col">Tổng tiền</th>
                 <th scope="col">SĐT</th>
                 <th scope="col">Trạng thái</th>
+                
                 <th scope="col">Thao tác</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach($dataBill as $row) {?>
+            <?php foreach($dataBook as $row) {?>
                 <tr> 
                     <td><?=$row['NguoiDung'] ?></td>
                     <td><?=$row['NgayHen'] ?></td>
+                    <td><?=$row['Gio']  ?></td>
                     <td><?= number_format($row['TongTien']) ?> VNĐ</td>
                     <td><?=$row['SDT'] ?></td>
-                    <td><?php if(($row['TrangThai']==1)){
-                        echo "Đã Duyệt";
+                    <td><?php if(($row['TrangThai']==3)){
+                        echo "Khách chưa đến";
                         
                     }else 
                         echo "Chưa duyệt";
                     ?> </td>
-                    <th><a href="?mod=bill&act=detail&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking">Xem chi tiết</a></th>
+                    <th>
+                        <a href="?mod=book&act=editBook&idBill=<?= $row['MaHD'] ?>" class = "btn-action btn-booking">Chỉnh sửa</a>
+                        <input class="MaBooking" type="hidden" value="<?= $row['MaHD'] ?>">
+                        <a  class = "btn-action btn-booking delete-booking">Xóa </a>
+                    </th>
                 </tr>
                 <?php }?>
         </tbody>
