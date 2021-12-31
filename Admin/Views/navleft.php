@@ -14,5 +14,8 @@
           <li class="item-nav">
             <a href="?mod=room&act=room"> Quản lý lịch hẹn</a>
           </li>
+          <li class="item-nav">
+            <a href="?mod=product&act=product"> Quản lý dịch vụ</a>
+          </li>
        </ul>
    </nav>
