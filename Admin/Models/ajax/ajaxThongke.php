@@ -1,7 +1,5 @@
 <?php
-require_once("../Carbon/autoload.php");
-use Carbon\Carbon;
-use Carbon\CarbonInterval;
+
 if (0==0) {
     $subdays = $_POST['subdays'];
     $now = $_POST['now'];

@@ -4,7 +4,7 @@
     ?>
     <form class="add-product-form"action="?mod=sanpham&act=update" method="POST" enctype="multipart/form-data">
     <input type="hidden" id="MaSP" value="<?= $data['MaSP'] ?>">
-    <input type="hidden" id="idtype" value="<?= $data['MaLSP'] ?>">
+  
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
@@ -19,14 +19,7 @@
             <?php }?>
         </select>
     </fieldset>
-    <fieldset class="add-product-item">
-        <label>Loại sản phẩm</label>
-        <select class="form-control" name="MaLSP" id="MaLSP">
-        <?php foreach ($data_lsp as $row) { ?>
-          <option <?= ($row['MaLSP'] == $data['MaLSP'])?'selected':''?> value="<?= $row['MaLSP'] ?>"><?= $row['TenLSP'] ?></option>
-        <?php } ?>
-        </select>
-    </fieldset>
+   
     <fieldset class="add-product-item">
         <label>Tên sản phẩm</label>
         <input class="form-control" type="text" name="TenSP" id="" value="<?=$data['TenSP']?>">

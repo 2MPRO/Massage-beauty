@@ -3,7 +3,7 @@
        <img src="../Public/imgs/img_web/logo.png" alt="" class="img-logo">
        <ul class = "nav-list">
           <li class="item-nav">
-            <a href=""> Trang chủ</a> 
+            <a href="../index.php"> Trang chủ</a> 
           </li>
           <li class="item-nav">
              <a href="">Quản lý tài khoản</a> 
