@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="Public/css/main.css">
     <link rel="stylesheet" href="Public/css/contact.css">
     <link rel="stylesheet" href="Public/css/grid.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Public/js/jquery.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="Public/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <title>Beauty Massage</title>
 </head>

@@ -48,7 +48,11 @@ session_start();
             $objCate = new BookingController();
             $objCate->show();
             break;
-
+        case 'bookingaction' :
+            require_once('./Controllers/bookingController.php');
+            $objCate = new BookingController();
+            $objCate->bookingaction();
+            break;
         case 'service':
                 require_once('./Controllers/serviceController.php');
                 $objCate = new serviceController();

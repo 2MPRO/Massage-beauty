@@ -10,7 +10,7 @@ use Carbon\CarbonInterval;
  <select id="text-date" class="form-control">
      <option selected value="<?= Carbon::now('Asia/Ho_Chi_Minh')->subDays(365)->toDateString(); ?>"> 365 Ngày qua</option>
      <option value="<?= Carbon::now('Asia/Ho_Chi_Minh')->subDays(30)->toDateString(); ?>"> 30 Ngày qua</option>
-     <option value="<?= Carbon::now('Asia/Ho_Chi_Minh')->subDays(30)->toDateString(); ?>"> 7 Ngày qua</option>
+     <option value="<?= Carbon::now('Asia/Ho_Chi_Minh')->subDays(7)->toDateString(); ?>"> 7 Ngày qua</option>
 </select>
 
 
