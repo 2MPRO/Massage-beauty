@@ -17,7 +17,6 @@ class ProductController
     {
         $data_product = $this->product_model->all();
         $data_km = $this->product_model->khuyenmai();
-        $data_lsp = $this->product_model->loaisp();
         $data_dm = $this->product_model->danhmuc();
 
         require_once("Views/indexviewAD.php");

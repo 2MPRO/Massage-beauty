@@ -2,7 +2,7 @@
     <?php 
       
     ?>
-    <form class="add-product-form"action="?mod=product&act=update" method="POST" enctype="multipart/form-data">
+    <form class="add-product-form"action="?mod=product&act=store" method="POST" enctype="multipart/form-data">
     <input type="hidden" id="MaSP" value="<?= $data['MaSP'] ?>">
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning">
@@ -31,7 +31,7 @@
 
     <fieldset class="form-field">
         <label>Mô tả</label>
-        <input  class="form-control" type="text" name="DonGia" id="" value="<?=$data['moTa']?>">
+        <input  class="form-control" type="text" name="moTa" id="" value="<?=$data['moTa']?>">
     </fieldset>
 
     <fieldset class="form-field">

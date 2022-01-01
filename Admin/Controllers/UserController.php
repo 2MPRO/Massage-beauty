@@ -64,7 +64,6 @@ class NguoiDungController
             'GioiTinh' => $_POST['GioiTinh'],
             'SDT' => $_POST['SDT'],
             'Email' =>    $_POST['Email'],
-            'DiaChi'  =>   $_POST['DiaChi'],
             'TaiKhoan' => $_POST['TaiKhoan'],
             'MatKhau' => md5($_POST['MatKhau']),
             'MaQuyen' =>  $_POST['MaQuyen'],

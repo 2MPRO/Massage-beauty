@@ -74,7 +74,7 @@ session_start();
 
         //   break;  
 
-        case 'user':
+        case 'nguoidung':
             require_once('Controllers/UserController.php');
             $controller_obj = new NguoiDungController();
             switch ($act) {

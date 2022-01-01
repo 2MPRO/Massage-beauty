@@ -1,5 +1,5 @@
 <?php if (1==1) { ?>
-<a href="?mod=nguoidung&act=add" type="button" class="btn btn-primary">Thêm mới</a>
+<a href="?mod=nguoidung&act=add" type="button" class="btn btn-booking">Thêm mới</a>
 <?php } ?>
 <?php if (isset($_COOKIE['msg'])) { ?>
   <div class="alert alert-success">
@@ -12,6 +12,8 @@
     <tr>
       <th class="th-firt" scope="col">MaND</th>
       <th scope="col">Tài khoản</th>
+      <th scope="col">Họ</th>
+      <th scope="col">Tên</th>
       <th scope="col">SDT</th>
       <th scope="col">Email</th>
       <th class="th-firt" scope="col">Giới tính</th>
@@ -25,6 +27,8 @@
       <tr>
         <th class="th-firt" scope="row"><?= $row['MaND'] ?></th>
         <td><?= $row['TaiKhoan'] ?></td>
+        <td><?= $row['Ho'] ?></td>
+        <td><?= $row['Ten'] ?></td>
         <td><?= $row['SDT'] ?></td>
         <td><?= $row['Email'] ?></td>
         <td class="th-firt"><?= $row['GioiTinh'] ?></td>
@@ -50,8 +54,8 @@
         </td>
         <td>
           <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
-          <a href="?mod=user&act=edit&id=<?= $row['MaND'] ?>" type="button" class="btn-action btn-booking">Chỉnh Sửa</a>
-          <a href="?mod=user&act=delete&id=<?= $row['MaND'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn-action btn-booking">Xóa</a>
+          <a href="?mod=nguoidung&act=edit&id=<?= $row['MaND'] ?>" type="button" class="btn-action btn-booking">Chỉnh Sửa</a>
+          <a href="?mod=nguoidung&act=delete&id=<?= $row['MaND'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn-action btn-booking">Xóa</a>
           <?php }?>
         </td>
       </tr>

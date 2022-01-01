@@ -170,7 +170,7 @@
                   }
                   break;
 
-              case 'user':
+              case 'nguoidung':
                 switch ($act) {
                   case 'list':         
                     require_once('user/list.php');

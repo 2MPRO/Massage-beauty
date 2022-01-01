@@ -6,7 +6,7 @@
             <a href=""> Trang chủ</a> 
           </li>
           <li class="item-nav">
-             <a href="?mod=user&act=user">Quản lý tài khoản</a> 
+             <a href="?mod=nguoidung&act=nguoidung">Quản lý tài khoản</a> 
           </li>
           <li class="item-nav">
             <a href="?mod=bill&act=bill"> Quản lý hóa đơn</a>

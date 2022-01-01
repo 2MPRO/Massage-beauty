@@ -1,5 +1,5 @@
     <div class="add-product-form">
-    <a class ="btn-addproduct" href="?mod=product&act=add"> Thêm mới</a>
+    <a class ="btn-booking" href="?mod=product&act=add"> Thêm mới</a>
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning alert-warning_productlist">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
