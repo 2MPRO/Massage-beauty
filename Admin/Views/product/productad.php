@@ -1,20 +1,20 @@
     <div class="add-product-form">
-    <a class ="btn-addproduct" href="?mod=sanpham&act=add"> Thêm mới</a>
+    <a class ="btn-addproduct" href="?mod=product&act=add"> Thêm mới</a>
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning alert-warning_productlist">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
     </div>
     <?php } ?>
     <hr>
-    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <table class="table table-bordered" id="dataTable" width="100%"cellspacing="0">
         <thead >
-            <th  scope="col">Mã sản phẩm</th>
-            <th  scope="col">Tên sản phẩm</th>
-            <th  scope="col">Giá thành</th>
-            <th  scope="col">Mô tả</th>
-            <th  scope="col">Khoảng thời gian (phút)</th>
-            <th  scope="col">Trạng thái</th>
-            <th  scope="col">Thao tác</th>
+            <th  scope="col" width="8%">Mã sản phẩm</th>
+            <th  scope="col" width="14%">Tên sản phẩm</th>
+            <th  scope="col" width="8%">Giá thành</th>
+            <th  scope="col" width="18%">Mô tả</th>
+            <th  scope="col" width="11%">Khoảng thời gian (phút)</th>
+            <th  scope="col" width="8%">Trạng thái</th>
+            <th  scope="col" width="10%">Thao tác</th>
         </thead>
        <?php foreach($data_product as $value){ ?>
                 <tr>
@@ -25,10 +25,9 @@
                 <td><?= $value['KhoangThoiGian'] ?></td>
                 <td><?= $value['TrangThai'] ?></td>
                 <td>
-                    <div class="">
-                    
-                        <a href="?mod=sanpham&act=edit&idsp=<?= $value['MaSP']?>" class="btn btn-booking">Sửa</a>
-                        <a href="?mod=sanpham&act=delete&idsp=<?= $value['MaSP']?>"  onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-booking">Xóa</a>
+                    <div class="">                 
+                        <a href="?mod=product&act=edit&idsp=<?= $value['MaSP']?>" class="btn-action btn-booking">Chỉnh Sửa</a>
+                        <a href="?mod=product&act=delete&idsp=<?= $value['MaSP']?>"  onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn-action btn-booking">Xóa</a>
                     </div>
                 </td>
             </tr>

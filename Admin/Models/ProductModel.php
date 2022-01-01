@@ -19,12 +19,12 @@
         return $data;
     }
     function getImgById($idsp){
-        $query = "select *from hinhanh where masp = $idsp";
+        $query = "select *from hinhanh where MaSP = $idsp";
         require("result.php");
         return $data;
     }
     function getSanPhamById($idsp){
-        $query = "select sanpham.*, danhmuc.MaDM  from sanpham, danhmuc, loaisanpham  where sanpham.masp = $idsp and sanpham.maLSP = loaisanpham.maLSP and loaisanpham.madm = danhmuc.madm " ;
+        $query = "select dichvu.*, danhmuc.MaDM from dichvu, danhmuc where dichvu.masp = 1 and dichvu.MaDM = danhmuc.MaDM " ;
         return $this->conn->query($query)->fetch_assoc();
     }
     function getIdProductnew(){

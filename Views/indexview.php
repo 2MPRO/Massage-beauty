@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Public/css/contact.css">
     <link rel="stylesheet" href="Public/css/grid.css">
     <link rel="stylesheet" href="Public/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
-    <title>Document</title>
+    <title>Beauty Massage</title>
 </head>
 <body>
     <div id="wrapper grid wide">
