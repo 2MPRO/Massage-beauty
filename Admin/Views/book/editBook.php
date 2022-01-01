@@ -20,7 +20,7 @@
 <form method="POST" class="form-add" action="?mod=book&act=saveEdit">
     
         <h1 class="form-title">Chỉnh sửa đặt lịch : <?= $databillselt[0]['MaHD'] ?></h1>
-        <input type="hidden" class="MaHD" value=" <?= $databillselt[0]['MaHD'] ?>">
+        <input type="hidden" name="MaHD" class="MaHD" value=" <?= $databillselt[0]['MaHD'] ?>">
        
         <fieldset class="form-field">
             <label for="">Người dùng</label>
@@ -69,7 +69,7 @@
         </fieldset>
         <fieldset class="form-field">
             <label for="">Số lượng</label>
-            <input class="SoLuong" name="SoLuong" type="number" name="" id="" min=1 required>
+            <input class="SoLuong" name="SoLuong" type="number" name="" id="" min=1>
         </fieldset>
        
         <fieldset>

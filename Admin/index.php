@@ -75,6 +75,7 @@ session_start();
         //   break;  
 
         case 'nguoidung':
+        case 'user':
             require_once('Controllers/UserController.php');
             $controller_obj = new NguoiDungController();
             switch ($act) {
@@ -124,10 +125,19 @@ session_start();
                 case 'saveEdit':    
                     $controller_obj->showsaveEdit();
                     break;
+                case 'confirm':
+                    $controller_obj->confirm();
+                    break;
                 default : 
                 $controller_obj->show();
                     break;
             }
           break;   
+          case 'statistical':
+            require_once('Controllers/statisticalController.php');
+            $controller_obj = new statisticalController();   
+            $controller_obj->show();
+                
+
     }
 ?>

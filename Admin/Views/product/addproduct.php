@@ -1,7 +1,6 @@
-
-    <?php 
+<?php 
     ?>
-    <form id ="table"c lass="add-product-form" action="?mod=product&act=update" method="POST" enctype="multipart/form-data">
+    <form id ="table"c lass="add-product-form"action="?mod=product&act=store" method="POST" enctype="multipart/form-data">
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
@@ -16,7 +15,7 @@
             <?php }?>
         </select>
     </fieldset>
-    
+  
     <fieldset class="form-field">
         <label>Tên sản phẩm</label>
         <input class="form-control" type="text" name="TenSP" id="">
@@ -26,8 +25,8 @@
         <input  class="form-control" type="text" name="DonGia" id="">
     </fieldset>
     <fieldset class="form-field">
-        <label>Số lượng</label>
-        <input class="form-control" type="text" name="SoLuong" id="">
+        <label>Khoảng thời gian</label>
+        <input class="form-control" type="text" name="KhoangThoiGian" id="">
     </fieldset>
     <fieldset class="form-field">
         <label>Hình ảnh chính</label>
@@ -55,10 +54,9 @@
     </fieldset>
     <fieldset class="form-field">
         <label>Mô tả</label>
-        <input class="form-control" type="text" name="" id="">
+        <input class="form-control" type="text" name="Mota" id="">
     </fieldset>
-    <button  class ="btn-booking"> Thêm </button>
+    <button  class ="btn-addproduct"> Thêm </button>
     
    
 </form>
-

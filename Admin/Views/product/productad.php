@@ -1,7 +1,7 @@
     <div class="add-product-form">
-    <a class ="btn-booking" href="?mod=product&act=add"> Thêm mới</a>
+    <a class ="btn-addproduct btn-booking" href="?mod=product&act=add"> Thêm mới</a>
     <?php if (isset($_COOKIE['msg'])) { ?>
-    <div class="alert alert-warning alert-warning_productlist">
+    <div style="margin: 20px;" class="alert alert-warning alert-warning_productlist">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
     </div>
     <?php } ?>
@@ -11,7 +11,6 @@
             <th  scope="col" width="8%">Mã sản phẩm</th>
             <th  scope="col" width="14%">Tên sản phẩm</th>
             <th  scope="col" width="8%">Giá thành</th>
-            <th  scope="col" width="18%">Mô tả</th>
             <th  scope="col" width="11%">Khoảng thời gian (phút)</th>
             <th  scope="col" width="8%">Trạng thái</th>
             <th  scope="col" width="10%">Thao tác</th>
@@ -21,7 +20,7 @@
                 <th><?= $value['MaSP']?></th>
                 <td><?= $value['TenSP'] ?></td>
                 <td><?= $value['DonGia'] ?></td>
-                <td><?= $value['moTa'] ?></td>
+               
                 <td><?= $value['KhoangThoiGian'] ?></td>
                 <td><?= $value['TrangThai'] ?></td>
                 <td>

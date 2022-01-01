@@ -68,8 +68,8 @@ class Model
             $this->table = "bill&act=bill";
         }
         if ($status == true) {
-            setcookie('msg',$query, time() + 2);
-           //setcookie('msg', 'Thêm mới thành công', time() + 2);
+            //setcookie('msg',$query, time() + 2);
+           setcookie('msg', 'Thêm mới thành công', time() + 2);
                 header('Location: ?mod=' . $this->table);
         } else {
             setcookie('msg',$query, time() + 2);

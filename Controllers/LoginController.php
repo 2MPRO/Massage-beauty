@@ -1,12 +1,13 @@
 <?php
    require_once("./Models/loginModel.php");
-    class loginController{
+    class loginController {
         var $select_model;
         function __construct()
         {
             $this->select_model = new LoginModel();
         }
         public function show(){
+            $dataCate = $this->select_model->danhmuc();
             require_once('./Views/indexview.php');  
         }
 

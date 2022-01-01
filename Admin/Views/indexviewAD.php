@@ -15,11 +15,16 @@
   <link rel="stylesheet" href="../Public/css/contact.css">
   <link rel="stylesheet" href="../Public/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
   <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-  
+ 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Public/js/jquery.js"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+  <!-- Thống kê -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 </head>
 
@@ -112,7 +117,11 @@
                 }
                 break;
 
-
+                case 'statistical':
+                  {
+                    require_once('statistical.php');
+                  }
+                  break;
               case 'khuyenmai':
                 switch ($act) {
                   case 'list':

@@ -1,6 +1,6 @@
 <?php 
-    require_once("./Models/connection.php");
-    class LoginModel{
+    require_once("./Models/model.php");
+    class LoginModel extends model{
         var $conn;
         function __construct()
         {

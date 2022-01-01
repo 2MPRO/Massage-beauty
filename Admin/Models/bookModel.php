@@ -80,6 +80,30 @@
             header('Location: ?mod=' . "book" );
         }
     }
+    function update($data)
+    {
+        $v = "";
+        foreach ($data as $key => $value) {
+            $v .= $key . "='" . $value . "',";
+        }
+        $v = trim($v, ",");
+
+
+        $query = "UPDATE $this->table SET  $v   WHERE $this->contens = " . $data[$this->contens];
+
+        $result = $this->conn->query($query);
+        if($this->table == "hoadon"){
+            $this->table= "bill";
+        }
+        if ($result == true) {
+            setcookie('msg', 'Cập nhật thành công', time() + 2);
+            
+            header('Location: ?mod=' . "book");
+        } else {
+            setcookie('msg', $query , time() + 2);
+            header('Location: ?mod=' . $this->table . '&act=edit&id=' . $data['id']['id']);
+        }
+    }
     function  detail($id){
         $query = "select ct.*, s.TenSP as Ten,Hoadon.TrangThai, s.DonGia as DonGia from chitiethoadon as ct,hoadon ,dichvu as s where ct.MaSP = s.MaSP and ct.MaHD = '$id' and hoadon.MaHD = ct.MaHD ";
 

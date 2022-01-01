@@ -9,6 +9,7 @@
         }
         function show(){
             $dataCate = $this->home_model->danhmuc();
+           
             require_once('./Views/indexview.php');  
         }
     }

@@ -17,6 +17,7 @@ class ProductController
     {
         $data_product = $this->product_model->all();
         $data_km = $this->product_model->khuyenmai();
+       
         $data_dm = $this->product_model->danhmuc();
 
         require_once("Views/indexviewAD.php");
@@ -61,16 +62,17 @@ class ProductController
         $giaCu =  $_POST['DonGia']+30000;
         $data_sanpham = array(
             'MASP' => 'null',
-            'MaLSP' =>    $_POST['MaLSP'],
+            'MaDM'  =>   $_POST['MaDM'],
+            'Mota' => $_POST['Mota'],
             'TenSP'  =>   $_POST['TenSP'],
             'DonGia' => $_POST['DonGia'],
-            'SoLuong' => $_POST['SoLuong'],
+            'KhoangThoiGian' => $_POST['KhoangThoiGian'],
             'MaKM' =>  $_POST['MaKM'],
             'SoSao' =>  0,
             'SoDanhGia' => 0,
             'TrangThai' => $trangThai,
             'ThoiGian' => $ThoiGian,
-            'giaCu'=> $giaCu
+            
         );
         $this->product_model->store($data_sanpham);
 
@@ -128,10 +130,12 @@ class ProductController
             // $giaCu =  $_POST['DonGia']+30000;
             $data_sanpham = array(
                 'MASP' => $_POST['MaSP'],
+                'MaDM'  =>   $_POST['MaDM'],
                 'TenSP'  =>   $_POST['TenSP'],
                 'DonGia' => $_POST['DonGia'],
-                'SoLuong' => $_POST['SoLuong'],
+                'KhoangThoiGian' => $_POST['KhoangThoiGian'],
                 'MaKM' =>  $_POST['MaKM'],
+                'Mota' =>  $_POST['Mota'],
                 'SoSao' =>  0,
                 'SoDanhGia' => 0,
                 'TrangThai' => $trangThai,
@@ -157,7 +161,7 @@ class ProductController
             if ($hinhAnh3 == "") {
                 unset($data_img['hinhanh3']);
             }
-            $this->product_model->updateImg($data_img, $masp);
+         //   $this->product_model->updateImg($data_img, $masp);
         }   
     }
   
