@@ -42,8 +42,35 @@ session_start();
                 $controller_obj->show();
                     break;
             }
-          break;  
+          break;     
 
+          case 'product':
+            require_once('Controllers/ProductController.php');
+            $controller_obj = new ProductController();
+            switch ($act) {
+                case 'list':
+                    $controller_obj->list();
+                    break;
+               case 'add':
+                    $controller_obj->add();
+                    break;
+               case 'store':
+                    $controller_obj->store();
+                    break;
+                 case 'delete':
+                    $controller_obj->delete();
+                    break;
+                case 'edit':
+                    $controller_obj->callUpdate();
+                    break;
+                case 'update':
+                    $controller_obj->update(); 
+                    break;
+                default:
+                    $controller_obj->list();
+                    break;
+            }
+            break;
           case 'book':
             require_once('Controllers/bookController.php');
             $controller_obj = new bookController();
@@ -71,5 +98,11 @@ session_start();
                     break;
             }
           break;   
+          case 'statistical':
+            require_once('Controllers/statisticalController.php');
+            $controller_obj = new statisticalController();   
+            $controller_obj->show();
+                
+
     }
 ?>

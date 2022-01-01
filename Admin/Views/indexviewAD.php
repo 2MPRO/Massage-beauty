@@ -15,11 +15,16 @@
   <link rel="stylesheet" href="../Public/css/contact.css">
   <link rel="stylesheet" href="../Public/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
   <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-  
+ 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Public/js/jquery.js"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+  <!-- Thống kê -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 </head>
 
@@ -112,7 +117,11 @@
                 }
                 break;
 
-
+                case 'statistical':
+                  {
+                    require_once('statistical.php');
+                  }
+                  break;
               case 'khuyenmai':
                 switch ($act) {
                   case 'list':
@@ -151,7 +160,26 @@
                     break;
                 }
                 break;
+
+                case 'product':
+                  switch ($act) {
+                    case 'list':
+                      require_once('product/sanpham/list.php');
+                      break;
+                    case 'add':
+                      require_once('product/addproduct.php');
+                      break;
+                    case 'edit':
+                      require_once('product/updateProduct.php');
+                      break;
+                    default:
+                      require_once('product/productad.php');
+                      break;
+                    }
+                    break;
+
             }
+
           } else {
             if (isset($_SESSION['isStaff']) && $_SESSION['isStaff'] == true) {
               $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";

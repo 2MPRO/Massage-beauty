@@ -1,4 +1,4 @@
-/* Liên hệ */
+/* LIÊN HỆ */
 * {
     margin: 0;
     padding: 0;
@@ -78,7 +78,7 @@
     margin-left: 50px;
 }
 
-.massage .massage_title {
+.massage .massage_title, .address, .hotline_email {
     text-align: justify;
 }
 
@@ -86,7 +86,7 @@
     margin-top: 16px;
     /* margin-right: 500px; */
     width: 80%;
-    text-align: justify;
+    
 }
 
 .massage .address span {
@@ -99,7 +99,7 @@
     margin-top: 16px;
     margin-right: 400px;
     width: 50%;
-    text-align: justify;
+    
 }
 
 .massage .hotline_email .hotline {
@@ -113,7 +113,7 @@
 }
 /* ------- ----------------------*/
 
-/* Đặc lịch hẹn*/
+/* ĐẶT LỊCH HẸN */
 .booking{
     margin: 100px 0;
     padding: 50px;
@@ -165,4 +165,45 @@
 .booking-field ::placeholder {
     color:  #fff;
   }
+/* ------- ----------------------*/
+
+/* FORM ĐĂNG KÝ */
+.register {
+    padding: 100px 0 ;
+   position: relative;
+ 
+ }
+ .register-head{
+     font-size: 3rem;
+     color: var(--cl-black);
+     margin: 0 0 20px;
+ }
+ .register:after {
+     content : "";
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-image: url(../imgs/img_web/background-login.jfif);
+     width: 100%;
+     height: 100%;
+     filter: blur(10px);
+     background-size: contain;
+     z-index: -1;
+ } 
+ .register-form{
+     margin: auto auto;
+     padding-bottom: 30px;
+     max-width: 37%;
+     background-color:rgba(0, 0, 0, 0.4); 
+   
+ }
+ .register-option{
+     margin: -20px 30px 30px;
+     font-size: 1.2rem;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+
 /* ------- ----------------------*/

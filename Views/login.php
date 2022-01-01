@@ -11,7 +11,7 @@
                 <input class="book-item-input" type="text" required  name="MatKhau" id="" placeholder="Mật khẩu" value="">
             </fieldset>
             <fieldset class="login-option">
-                <a href="">Đăng ký</a>
+                <a href="?act=register">Đăng ký</a>
                 <a href="">Quên mật khẩu</a>
             </fieldset>
             <fieldset>

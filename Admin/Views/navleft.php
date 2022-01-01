@@ -14,8 +14,12 @@
           <li class="item-nav">
             <a href="?mod=book&act=book"> Quản lý lịch hẹn</a>
           </li>
+         
           <li class="item-nav">
-            <a href="?mod=book&act=book"> Thống kê</a>
+            <a href="?mod=product&act=product"> Quản lý dịch vụ</a>
+          </li>
+          <li class="item-nav">
+            <a href="?mod=statistical"> Thống kê</a>
           </li>
        </ul>
    </nav>
