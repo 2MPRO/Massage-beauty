@@ -72,7 +72,38 @@ session_start();
             }
             break;
 
-          break;  
+        //   break;  
+
+        case 'user':
+            require_once('Controllers/UserController.php');
+            $controller_obj = new NguoiDungController();
+            switch ($act) {
+                case 'list':
+                    $controller_obj->list();
+                    break;
+                case 'detail':
+                    $controller_obj->detail();
+                    break;
+                case 'add':
+                    $controller_obj->add();
+                    break;
+                case 'store':
+                    $controller_obj->store();
+                    break;
+                case 'delete':
+                    $controller_obj->delete();
+                    break;
+                case 'edit':
+                    $controller_obj->edit();
+                    break;
+                case 'update':
+                    $controller_obj->update();
+                    break;
+                default:
+                    $controller_obj->list();
+                    break;
+            }
+            break;
 
           case 'book':
             require_once('Controllers/bookController.php');

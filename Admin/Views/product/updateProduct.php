@@ -2,16 +2,15 @@
     <?php 
       
     ?>
-    <form class="add-product-form"action="?mod=sanpham&act=update" method="POST" enctype="multipart/form-data">
+    <form class="add-product-form"action="?mod=product&act=update" method="POST" enctype="multipart/form-data">
     <input type="hidden" id="MaSP" value="<?= $data['MaSP'] ?>">
-    <input type="hidden" id="idtype" value="<?= $data['MaLSP'] ?>">
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
     </div>
   <?php } ?>
     <h3>Thêm sản phẩm mới : </h3>
-    <fieldset class="add-product-item">
+    <fieldset class="form-field">
         <label>Danh mục</label>
         <select id="MaDM" class="form-control" name="MaDM" id="add-cate">
        <?php foreach ($data_dm as $row){ ?>
@@ -19,25 +18,30 @@
             <?php }?>
         </select>
     </fieldset>
-    <fieldset class="add-product-item">
-        <label>Loại sản phẩm</label>
-        <select class="form-control" name="MaLSP" id="MaLSP">
-        <?php foreach ($data_lsp as $row) { ?>
-          <option <?= ($row['MaLSP'] == $data['MaLSP'])?'selected':''?> value="<?= $row['MaLSP'] ?>"><?= $row['TenLSP'] ?></option>
-        <?php } ?>
-        </select>
-    </fieldset>
-    <fieldset class="add-product-item">
+
+    <fieldset class="form-field">
         <label>Tên sản phẩm</label>
         <input class="form-control" type="text" name="TenSP" id="" value="<?=$data['TenSP']?>">
     </fieldset>
-    <fieldset class="add-product-item">
+
+    <fieldset class="form-field">
         <label>Đơn giá</label>
         <input  class="form-control" type="text" name="DonGia" id="" value="<?=$data['DonGia']?>">
     </fieldset>
-    <fieldset class="add-product-item">
-        <label>Số lượng</label>
-        <input class="form-control" type="text" name="SoLuong" id="" value="<?=$data['SoLuong']?>">
+
+    <fieldset class="form-field">
+        <label>Mô tả</label>
+        <input  class="form-control" type="text" name="DonGia" id="" value="<?=$data['moTa']?>">
+    </fieldset>
+
+    <fieldset class="form-field">
+        <label>Khoảng thời gian</label>
+        <input class="form-control" type="text" name="SoLuong" id="" value="<?=$data['KhoangThoiGian']?>">
+    </fieldset>
+
+    <fieldset class="form-field">
+        <label>Trạng thái</label>
+        <input class="form-control" type="text" name="SoLuong" id="" value="<?=$data['TrangThai']?>">
     </fieldset>
     
     <?php 
@@ -48,14 +52,14 @@
            }
                 
         if(isset($dataImg[$i-1])){?>
-        <fieldset class="add-product-item">
+        <fieldset class="form-field">
             <label>Hình ảnh <?=$i?> </label>
-            <img src="../public/images/<?=$imgrow['hinhanh']?>" height="200px" width="200px">
+            <img src="../public/imgs/img_service/<?=$imgrow['hinhanh']?>" height="200px" width="200px">
             <input type="file" class="form-control" id="" placeholder="" name="<?=$imgrow['tenhinh']?>" value="<?=$imgrow['hinhanh']?>">
             
         </fieldset>
     <?php }else{ ?>
-        <fieldset class="add-product-item">
+        <fieldset class="form-field">
             <label>Hình ảnh <?=$i?> </label>
             <input type="file" class="form-control" id="" placeholder="" name="hinhanh<?=$i?>" value="">
         </fieldset>
@@ -64,7 +68,7 @@
     
    
    
-    <fieldset class="add-product-item">
+    <fieldset class="form-field">
         <label>Mã khuyến mãi</label>
         <select id="" name="MaKM" class="form-control">
         <?php foreach ($data_km as $row) { ?>
@@ -73,15 +77,8 @@
       </select>
       
     </fieldset>
-    <fieldset class="add-product-item">
-        <label>Trạng thái</label>
-        <input type="checkbox" id="" checked="true" placeholder="" value="1" name="TrangThai"><em>(Check cho phép hiện thị sản phẩm)</em>
-    </fieldset>
-    <fieldset class="add-product-item">
-        <label>Mô tả</label>
-        <input class="form-control" type="text" name="" id="">
-    </fieldset>
-    <button  class ="btn-addproduct"> Thêm </button>
+
+    <button  class ="btn-booking"> Cập nhật </button>
     
    
 </form>
