@@ -72,6 +72,9 @@ session_start();
             }
             break;
 
+        //   break;  
+
+        case 'nguoidung':
         case 'user':
             require_once('Controllers/UserController.php');
             $controller_obj = new NguoiDungController();

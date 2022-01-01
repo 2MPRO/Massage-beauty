@@ -144,7 +144,20 @@
         } else {
             setcookie('msg', 'Xóa không thành công', time() + 2);
         }
-        header('Location: ?mod=' . $this->table);
+        header('Location: ?mod=' . "product");
+    }
+
+    function delete($id)
+    {
+        $query = "DELETE from $this->table where $this->contens=$id";
+        
+        $status = $this->conn->query($query);
+        if ($status == true) {
+            setcookie('msg', 'Xóa thành công', time() + 2);
+        } else {
+            setcookie('msg', 'Xóa không thành công', time() + 2);
+        }
+        header('Location: ?mod=' . "product");
     }
     
 }

@@ -1,5 +1,4 @@
-
-    <?php 
+<?php 
     ?>
     <form id ="table"c lass="add-product-form"action="?mod=product&act=store" method="POST" enctype="multipart/form-data">
     <?php if (isset($_COOKIE['msg'])) { ?>
@@ -61,4 +60,3 @@
     
    
 </form>
-
