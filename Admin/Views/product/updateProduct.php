@@ -1,4 +1,3 @@
-
 <div class="">
 <?php if (isset($_COOKIE['msg'])) { ?>
         <div class="alert alert-warning">
@@ -75,7 +74,5 @@
             <?php } ?>
         </select>
     </fieldset>
-    
     <input  class="btn-booking" type="submit" value="Cập nhật">
 </form>
-
