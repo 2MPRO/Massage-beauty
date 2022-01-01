@@ -17,7 +17,7 @@ class ProductController
     {
         $data_product = $this->product_model->all();
         $data_km = $this->product_model->khuyenmai();
-      
+       
         $data_dm = $this->product_model->danhmuc();
 
         require_once("Views/indexviewAD.php");
@@ -31,7 +31,7 @@ class ProductController
     }
     public function store()
     {
-        $target_dir = "../public/images/";
+        $target_dir = "../public/imgs/img_service/";
         $hinhAnhChinh = "";
         $target_file = $target_dir . basename($_FILES["hinhAnhChinh"]["name"]);
         $status_upload = move_uploaded_file($_FILES["hinhAnhChinh"]["tmp_name"], $target_file);
@@ -62,16 +62,17 @@ class ProductController
         $giaCu =  $_POST['DonGia']+30000;
         $data_sanpham = array(
             'MASP' => 'null',
-            'MaLSP' =>    $_POST['MaLSP'],
+            'MaDM'  =>   $_POST['MaDM'],
+            'Mota' => $_POST['Mota'],
             'TenSP'  =>   $_POST['TenSP'],
             'DonGia' => $_POST['DonGia'],
-            'SoLuong' => $_POST['SoLuong'],
+            'KhoangThoiGian' => $_POST['KhoangThoiGian'],
             'MaKM' =>  $_POST['MaKM'],
             'SoSao' =>  0,
             'SoDanhGia' => 0,
             'TrangThai' => $trangThai,
             'ThoiGian' => $ThoiGian,
-            'giaCu'=> $giaCu
+            
         );
         $this->product_model->store($data_sanpham);
 
@@ -90,16 +91,15 @@ class ProductController
     {
         $id = isset($_GET['idsp']) ? $_GET['idsp'] : 1;
         $data_km = $this->product_model->khuyenmai();
-      
         $data_dm = $this->product_model->danhmuc();
-        $data = $this->product_model->getdichvuById($id);
+        $data = $this->product_model->getSanPhamById($id);
         $dataImg = $this->product_model->getImgById($id);
         require_once("Views/indexviewAD.php");
     }
     public function update()
     {
         if(!empty($_POST)){
-            $target_dir = "../public/images/";
+            $target_dir = "../public/imgs/img_service/";
             $hinhAnh1 = "";
             $target_file = $target_dir . basename($_FILES["hinhanh1"]["name"]);
             $status_upload = move_uploaded_file($_FILES["hinhanh1"]["tmp_name"], $target_file);
@@ -127,19 +127,20 @@ class ProductController
             
             date_default_timezone_set('Asia/Ho_Chi_Minh');
             $ThoiGian =  date('Y-m-d H:i:s');
-            $giaCu =  $_POST['DonGia']+30000;
+            // $giaCu =  $_POST['DonGia']+30000;
             $data_sanpham = array(
                 'MASP' => $_POST['MaSP'],
-                'MaLSP' =>  $_POST['MaLSP'],
+                'MaDM'  =>   $_POST['MaDM'],
                 'TenSP'  =>   $_POST['TenSP'],
                 'DonGia' => $_POST['DonGia'],
-                'SoLuong' => $_POST['SoLuong'],
+                'KhoangThoiGian' => $_POST['KhoangThoiGian'],
                 'MaKM' =>  $_POST['MaKM'],
+                'Mota' =>  $_POST['Mota'],
                 'SoSao' =>  0,
                 'SoDanhGia' => 0,
                 'TrangThai' => $trangThai,
                 'ThoiGian' => $ThoiGian,
-                'giaCu'=> $giaCu
+                // 'giaCu'=> $giaCu
             );
             $masp = $_POST['MaSP'];
             $this->product_model->updateProduct($data_sanpham);
@@ -160,7 +161,7 @@ class ProductController
             if ($hinhAnh3 == "") {
                 unset($data_img['hinhanh3']);
             }
-            $this->product_model->updateImg($data_img, $masp);
+         //   $this->product_model->updateImg($data_img, $masp);
         }   
     }
   

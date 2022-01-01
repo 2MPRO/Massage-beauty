@@ -3,9 +3,6 @@
    
     class serviceModel extends model{
        
-        var $table = "dichvu";
-        var $contens = "MaDM";
-
         function service_category($a,$b,$danhmuc)
         {  
             $query ="SELECT * from dichvu, danhmuc, hinhanh,khuyenmai
@@ -70,5 +67,6 @@
        }
 
     
+
     }
 ?>

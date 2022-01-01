@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fruity Fresh</title>
+  <title>Beauty Massage</title>
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="../Public/css/grid.css">
@@ -141,6 +141,7 @@
                     break;
                 }
                 break;
+
               case 'banner':
                 switch ($act) {
                   case 'list':
@@ -161,22 +162,42 @@
                 }
                 break;
 
-                case 'product':
-                  switch ($act) {
-                    case 'list':
-                      require_once('product/sanpham/list.php');
-                      break;
-                    case 'add':
-                      require_once('product/addproduct.php');
-                      break;
-                    case 'edit':
-                      require_once('product/updateProduct.php');
-                      break;
-                    default:
-                      require_once('product/productad.php');
-                      break;
-                    }
+              case 'product':
+                switch ($act) {
+                  case 'list':
+                    require_once('product/sanpham/list.php');
                     break;
+                  case 'add':
+                    require_once('product/addproduct.php');
+                    break;
+                  case 'edit':
+                    require_once('product/updateProduct.php');
+                    break;
+                  default:
+                    require_once('product/productad.php');
+                    break;
+                  }
+                  break;
+
+              case 'user':
+                switch ($act) {
+                  case 'list':         
+                    require_once('user/list.php');
+                    break;
+                  case 'add':
+                    require_once('user/add.php');
+                    break;
+                  case 'detail':
+                    require_once('user/detail.php');
+                    break;
+                  case 'edit':
+                    require_once('user/edit.php');
+                    break;
+                  default:
+                    require_once('user/list.php');
+                    break;
+                }
+                break;
 
             }
 

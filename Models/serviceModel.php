@@ -13,9 +13,7 @@
                     AND dichvu.MaSP = hinhanh.masp
                     GROUP by dichvu.MaSP
                     ORDER BY ThoiGian DESC limit $a,$b";
-                echo "<script>
-                alert($query);
-            </script>";
+              
             require("result.php");
             return $data;  
         }

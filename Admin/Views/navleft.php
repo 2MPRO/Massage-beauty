@@ -6,7 +6,7 @@
             <a href="../index.php"> Trang chủ</a> 
           </li>
           <li class="item-nav">
-             <a href="">Quản lý tài khoản</a> 
+             <a href="?mod=user&act=user">Quản lý tài khoản</a> 
           </li>
           <li class="item-nav">
             <a href="?mod=bill&act=bill"> Quản lý hóa đơn</a>
