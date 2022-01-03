@@ -17,7 +17,7 @@
     </fieldset>
   
     <fieldset class="form-field">
-        <label>Tên sản phẩm</label>
+        <label>Tên dịch vụ</label>
         <input class="form-control" type="text" name="TenSP" id="">
     </fieldset>
     <fieldset class="form-field">
@@ -56,7 +56,7 @@
         <label>Mô tả</label>
         <input class="form-control" type="text" name="Mota" id="">
     </fieldset>
-    <button  class ="btn-addproduct"> Thêm </button>
+    <button  class ="btn-addproduct btn-booking"> Thêm </button>
     
    
 </form>

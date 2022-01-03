@@ -33,19 +33,7 @@
         </fieldset>
 
 
-        <!--  -->
-        <fieldset class="form-field">
-                <label for="">Ngày</label>
-                <input type="hidden" id="date-picker-hidden" name="datepicker" >
-                <input type="date"  value="<?= $databillselt[0]['NgayHen'] ?>" id="date-picker" required>
-            </fieldset>
-            <fieldset class="form-field">
-                <label for="">Giờ</label>
-                <input type="hidden"   id="time-picker-hidden" name="timepicker">
-                <input type="time"   id="time-picker" value="<?=  $databillselt[0]['Gio'] ?>" timeformat = "24h" required>
-            </fieldset>
-        <!--  -->
-        
+       
         <button style="margin: 5px;" class = "btn-booking"> Lưu thay đổi</button>
         <a style="margin: 5px;" href="?mod=book&act=confirm&MaHD=<?= $MaHD ?>" class="btn-booking btn-add-new">Xuất ra hóa đơn</a>
         <hr>

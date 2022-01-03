@@ -105,12 +105,49 @@ $(document).ready(function () {
     })
 
   
-   
+    //fitter 
+    $("#date-fitter").change(function(){
+        curDate = $('#date-fitter').val();
+        let dt = new Date(curDate);`enter code here`
+        let date = dt.getDate();
+        let month = dt.getMonth()+1;
+        let year = dt.getFullYear();
+        let  day= year +"-"+month +"-"+date;
+        $.ajax({
+            url: "Models/ajax/ajax_fitter.php",
+            method: "POST",
+            data: {day:day},
+            success: function (data) {
+                $('.tablebooklist').html(data);
+                    onPageLoad();
+            }
+
+        })
+
+    });
     
 
     onPageLoad();
     function onPageLoad(){
-        
+         /// delete booking 
+    $('.delete-booking').each(function(i,element){
+        $(this).click(function(){
+            i = $('.delete-booking').index(this);
+            let MaHD = $('.MaBooking').eq(i).val();
+            alert("Xóa lịch")
+            $.ajax({
+                url: "Models/ajax/ajax_action.php",
+                method: "POST",
+                data: { MaHD:MaHD, action:"deleteBill"},
+                success: function (data) {
+                   location.reload();
+                }
+    
+            })
+        })
+    })
+    
+
         //delete 
         $(".btn-delete-billService").each(function(i,element){
             $(this).click(function(){
@@ -132,8 +169,8 @@ $(document).ready(function () {
                                 onPageLoad();
                             }
                         })
-                        
-                    });
+               
+        });
         })
       
 
@@ -218,24 +255,7 @@ $(document).ready(function () {
             })
         })
     }
-    /// delete booking 
-    $('.delete-booking').each(function(i,element){
-    $(this).click(function(){
-        i = $('.delete-booking').index(this);
-        let MaHD = $('.MaBooking').eq(i).val();
-        alert("Xóa lịch")
-        $.ajax({
-            url: "Models/ajax/ajax_action.php",
-            method: "POST",
-            data: { MaHD:MaHD, action:"deleteBill"},
-            success: function (data) {
-               location.reload();
-            }
-
-        })
-    })
-})
-
+   
  
 });
 ////

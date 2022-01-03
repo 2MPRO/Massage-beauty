@@ -4,6 +4,14 @@
         var $table = "hoadon";
         var $contens = "MaHD";
 
+
+        function getBillOnDay($day){
+            $query = "select MaHD,MaND, DATE_FORMAT(NgayHen, '%d-%m-%Y') as NgayHen,Gio,NguoiDung,SDT,DiaChi,TongTien,TrangThai from $this->table where trangthai = '3' and NgayHen ='$day' ";
+    
+            require("result.php");
+    
+            return $data;  
+        }
         function All()
         {
             $query = "select MaHD,MaND, DATE_FORMAT(NgayHen, '%d-%m-%Y') as NgayHen,Gio,NguoiDung,SDT,DiaChi,TongTien,TrangThai from $this->table where trangthai = '3'";

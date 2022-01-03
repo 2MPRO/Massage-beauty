@@ -8,7 +8,7 @@
                 <input class="book-item-input" type="text" required  name="SDT" id="" placeholder="Số điện thoại" value="">
             </fieldset>
             <fieldset class = "book-field">
-                <input class="book-item-input" type="text" required  name="MatKhau" id="" placeholder="Mật khẩu" value="">
+                <input class="book-item-input" type="password" required  name="MatKhau" id="" placeholder="Mật khẩu" value="">
             </fieldset>
             <fieldset class="login-option">
                 <a href="?act=register">Đăng ký</a>

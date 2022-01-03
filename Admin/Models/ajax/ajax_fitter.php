@@ -1,20 +1,12 @@
-<a href="?mod=book&act=addBook" class="btn-booking btn-add-new">Đặt lịch</a>
+<?php
 
-<?php if (isset($_COOKIE['msg'])) { ?>
-    <div class="alert alert-success">
-        <strong class= "msg-box">Thông báo : <?= $_COOKIE['msg'] ?></strong> 
-    </div>
-<?php } ?>
-<hr>
-<div class="selectgay">
-        <fieldset class = "booking-field">
-            <input class ="input-loc" type="date" placeholder="Chọn ngày"   id="date-fitter" required>  
-        </fieldset>
-</div>
-<div class="body-content">
-    <table class="table table-bordered tablebooklist" id="dataTable" width="100%" cellspacing="0">
-    
-        <thead>
+if (0==0) {
+    $now = $_POST['day'];
+    include("../bookModel.php");
+    $controller_obj = new bookModel();
+    $dataBook = $controller_obj->getBillOnDay($now);
+   ?>
+      <thead>
             <tr>
                 <th scope="col">Tên Khách Hàng</th>
                 <th scope="col">Ngày Hẹn</th>
@@ -47,10 +39,6 @@
                 </tr>
                 <?php }?>
         </tbody>
-    </table>
-    <script>
-  $(document).ready(function() {
-    $('#dataTable').DataTable();
-  });
-</script>
-</div>
+<?php 
+}
+?>

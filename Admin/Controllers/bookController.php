@@ -64,8 +64,7 @@
                 $MaND = $_POST['MaND'];
                 $MaHD = $_POST['MaHD'];
                 $Tien = $_POST['TongTien'];
-                $time = $_POST['timepicker'];
-                $date = $_POST['datepicker'];
+               
                 $Tien = intval(preg_replace('/[^\d.]/', '', $Tien));
                 $User = $this->book_model->getUserByID($MaND);
                 $NguoiDung = $User[0]['Ho']." ".$User[0]['Ten'];
@@ -79,9 +78,7 @@
                     'DiaChi' => $DiaChi,
                     'NguoiDung' => $NguoiDung,
                     'TrangThai' =>'3',
-                    'tongTien' => $Tien,
-                    'Gio' => $time,
-                    'NgayHen' => $date
+                    'tongTien' => $Tien
                     );
 
                 $this->book_model->update($data_Bill);
